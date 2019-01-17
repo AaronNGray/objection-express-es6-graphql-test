@@ -1,0 +1,94 @@
+C:\Users\aaron\Tests\objection-tests\express-es6>node objection-graphql.js
+type Animals {
+  id: Int
+  ownerId: Int
+  name: String
+  species: String
+  owner(id: Int, parentId: Int, firstName: String, lastName: String, age: Float, idEq: Int, parentIdEq: Int, firstNameEq: String, lastNameEq: String, ageEq: Float, idGt: Int, parentIdGt: Int, firstNameGt: String, lastNameGt: String, ageGt: Float, idGte: Int, parentIdGte: Int, firstNameGte: String, lastNameGte: String, ageGte: Float, idLt: Int, parentIdLt: Int, firstNameLt: String, lastNameLt: String, ageLt: Float, idLte: Int, parentIdLte: Int, firstNameLte: String, lastNameLte: String, ageLte: Float, idLike: Int, parentIdLike: Int, firstNameLike: String, lastNameLike: String, ageLike: Float, idIsNull: Boolean, parentIdIsNull: Boolean, firstNameIsNull: Boolean, lastNameIsNull: Boolean, ageIsNull: Boolean, idIn: [Int], parentIdIn: [Int], firstNameIn: [String], lastNameIn: [String], ageIn: [Float], idNotIn: [Int], parentIdNotIn: [Int], firstNameNotIn: [String], lastNameNotIn: [String], ageNotIn: [Float], idLikeNoCase: Int, parentIdLikeNoCase: Int, firstNameLikeNoCase: String, lastNameLikeNoCase: String, ageLikeNoCase: Float, orderBy: PersonsPropertiesEnum, orderByDesc: PersonsPropertiesEnum, limit: [Int], offset: [Int]): Persons
+}
+
+enum AnimalsPropertiesEnum {
+  id
+  ownerId
+  name
+  species
+}
+
+type Movies {
+  id: Int
+  name: String
+  actors(id: Int, parentId: Int, firstName: String, lastName: String, age: Float, idEq: Int, parentIdEq: Int, firstNameEq: String, lastNameEq: String, ageEq: Float, idGt: Int, parentIdGt: Int, firstNameGt: String, lastNameGt: String, ageGt: Float, idGte: Int, parentIdGte: Int, firstNameGte: String, lastNameGte: String, ageGte: Float, idLt: Int, parentIdLt: Int, firstNameLt: String, lastNameLt: String, ageLt: Float, idLte: Int, parentIdLte: Int, firstNameLte: String, lastNameLte: String, ageLte: Float, idLike: Int, parentIdLike: Int, firstNameLike: String, lastNameLike: String, ageLike: Float, idIsNull: Boolean, parentIdIsNull: Boolean, firstNameIsNull: Boolean, lastNameIsNull: Boolean, ageIsNull: Boolean, idIn: [Int], parentIdIn: [Int], firstNameIn: [String], lastNameIn: [String], ageIn: [Float], idNotIn: [Int], parentIdNotIn: [Int], firstNameNotIn: [String], lastNameNotIn: [String], ageNotIn: [Float], idLikeNoCase: Int, parentIdLikeNoCase: Int, firstNameLikeNoCase: String, lastNameLikeNoCase: String, ageLikeNoCase: Float, orderBy: PersonsPropertiesEnum, orderByDesc: PersonsPropertiesEnum, limit: [Int], offset: [Int]): [Persons]
+}
+
+enum MoviesPropertiesEnum {
+  id
+  name
+}
+
+type Persons {
+  id: Int
+  parentId: Int
+  firstName: String
+  lastName: String
+  age: Float
+  address: PersonsAddressJsonType2
+  pets(id: Int, ownerId: Int, name: String, species: String, idEq: Int, ownerIdEq: Int, nameEq: String, speciesEq: String, idGt: Int, ownerIdGt: Int, nameGt: String, speciesGt: String, idGte: Int, ownerIdGte: Int, nameGte: String, speciesGte: String, idLt: Int, ownerIdLt: Int, nameLt: String, speciesLt: String, idLte: Int, ownerIdLte: Int, nameLte: String, speciesLte: String, idLike: Int, ownerIdLike: Int, nameLike: String, speciesLike: String, idIsNull: Boolean, ownerIdIsNull: Boolean, nameIsNull: Boolean, speciesIsNull: Boolean, idIn: [Int], ownerIdIn: [Int], nameIn: [String], speciesIn: [String], idNotIn: [Int], ownerIdNotIn: [Int], nameNotIn: [String], speciesNotIn: [String], idLikeNoCase: Int, ownerIdLikeNoCase: Int, nameLikeNoCase: String, speciesLikeNoCase: String, orderBy: AnimalsPropertiesEnum, orderByDesc: AnimalsPropertiesEnum, limit: [Int], offset: [Int]): [Animals]
+  movies(id: Int, name: String, idEq: Int, nameEq: String, idGt: Int, nameGt: String, idGte: Int, nameGte: String, idLt: Int, nameLt: String, idLte: Int, nameLte: String, idLike: Int, nameLike: String, idIsNull: Boolean, nameIsNull: Boolean, idIn: [Int], nameIn: [String], idNotIn: [Int], nameNotIn: [String], idLikeNoCase: Int, nameLikeNoCase: String, orderBy: MoviesPropertiesEnum, orderByDesc: MoviesPropertiesEnum, limit: [Int], offset: [Int]): [Movies]
+  children(id: Int, parentId: Int, firstName: String, lastName: String, age: Float, idEq: Int, parentIdEq: Int, firstNameEq: String, lastNameEq: String, ageEq: Float, idGt: Int, parentIdGt: Int, firstNameGt: String, lastNameGt: String, ageGt: Float, idGte: Int, parentIdGte: Int, firstNameGte: String, lastNameGte: String, ageGte: Float, idLt: Int, parentIdLt: Int, firstNameLt: String, lastNameLt: String, ageLt: Float, idLte: Int, parentIdLte: Int, firstNameLte: String, lastNameLte: String, ageLte: Float, idLike: Int, parentIdLike: Int, firstNameLike: String, lastNameLike: String, ageLike: Float, idIsNull: Boolean, parentIdIsNull: Boolean, firstNameIsNull: Boolean, lastNameIsNull: Boolean, ageIsNull: Boolean, idIn: [Int], parentIdIn: [Int], firstNameIn: [String], lastNameIn: [String], ageIn: [Float], idNotIn: [Int], parentIdNotIn: [Int], firstNameNotIn: [String], lastNameNotIn: [String], ageNotIn: [Float], idLikeNoCase: Int, parentIdLikeNoCase: Int, firstNameLikeNoCase: String, lastNameLikeNoCase: String, ageLikeNoCase: Float, orderBy: PersonsPropertiesEnum, orderByDesc: PersonsPropertiesEnum, limit: [Int], offset: [Int]): [Persons]
+  parent(id: Int, parentId: Int, firstName: String, lastName: String, age: Float, idEq: Int, parentIdEq: Int, firstNameEq: String, lastNameEq: String, ageEq: Float, idGt: Int, parentIdGt: Int, firstNameGt: String, lastNameGt: String, ageGt: Float, idGte: Int, parentIdGte: Int, firstNameGte: String, lastNameGte: String, ageGte: Float, idLt: Int, parentIdLt: Int, firstNameLt: String, lastNameLt: String, ageLt: Float, idLte: Int, parentIdLte: Int, firstNameLte: String, lastNameLte: String, ageLte: Float, idLike: Int, parentIdLike: Int, firstNameLike: String, lastNameLike: String, ageLike: Float, idIsNull: Boolean, parentIdIsNull: Boolean, firstNameIsNull: Boolean, lastNameIsNull: Boolean, ageIsNull: Boolean, idIn: [Int], parentIdIn: [Int], firstNameIn: [String], lastNameIn: [String], ageIn: [Float], idNotIn: [Int], parentIdNotIn: [Int], firstNameNotIn: [String], lastNameNotIn: [String], ageNotIn: [Float], idLikeNoCase: Int, parentIdLikeNoCase: Int, firstNameLikeNoCase: String, lastNameLikeNoCase: String, ageLikeNoCase: Float, orderBy: PersonsPropertiesEnum, orderByDesc: PersonsPropertiesEnum, limit: [Int], offset: [Int]): Persons
+}
+
+type PersonsAddressJsonType2 {
+  street: String
+  city: String
+  zipCode: String
+}
+
+enum PersonsPropertiesEnum {
+  id
+  parentId
+  firstName
+  lastName
+  age
+}
+
+type Query {
+  movies(id: Int, name: String, idEq: Int, nameEq: String, idGt: Int, nameGt: String, idGte: Int, nameGte: String, idLt: Int, nameLt: String, idLte: Int, nameLte: String, idLike: Int, nameLike: String, idIsNull: Boolean, nameIsNull: Boolean, idIn: [Int], nameIn: [String], idNotIn: [Int], nameNotIn: [String], idLikeNoCase: Int, nameLikeNoCase: String, orderBy: MoviesPropertiesEnum, orderByDesc: MoviesPropertiesEnum, range: [Int], limit: [Int], offset: [Int]): Movies
+  moviess(id: Int, name: String, idEq: Int, nameEq: String, idGt: Int, nameGt: String, idGte: Int, nameGte: String, idLt: Int, nameLt: String, idLte: Int, nameLte: String, idLike: Int, nameLike: String, idIsNull: Boolean, nameIsNull: Boolean, idIn: [Int], nameIn: [String], idNotIn: [Int], nameNotIn: [String], idLikeNoCase: Int, nameLikeNoCase: String, orderBy: MoviesPropertiesEnum, orderByDesc: MoviesPropertiesEnum, range: [Int], limit: [Int], offset: [Int]): [Movies]
+  persons(id: Int, parentId: Int, firstName: String, lastName: String, age: Float, idEq: Int, parentIdEq: Int, firstNameEq: String, lastNameEq: String, ageEq: Float, idGt: Int, parentIdGt: Int, firstNameGt: String, lastNameGt: String, ageGt: Float, idGte: Int, parentIdGte: Int, firstNameGte: String, lastNameGte: String, ageGte: Float, idLt: Int, parentIdLt: Int, firstNameLt: String, lastNameLt: String, ageLt: Float, idLte: Int, parentIdLte: Int, firstNameLte: String, lastNameLte: String, ageLte: Float, idLike: Int, parentIdLike: Int, firstNameLike: String, lastNameLike: String, ageLike: Float, idIsNull: Boolean, parentIdIsNull: Boolean, firstNameIsNull: Boolean, lastNameIsNull: Boolean, ageIsNull: Boolean, idIn: [Int], parentIdIn: [Int], firstNameIn: [String], lastNameIn: [String], ageIn: [Float], idNotIn: [Int], parentIdNotIn: [Int], firstNameNotIn: [String], lastNameNotIn: [String], ageNotIn: [Float], idLikeNoCase: Int, parentIdLikeNoCase: Int, firstNameLikeNoCase: String, lastNameLikeNoCase: String, ageLikeNoCase: Float, orderBy: PersonsPropertiesEnum, orderByDesc: PersonsPropertiesEnum, range: [Int], limit: [Int], offset: [Int]): Persons
+  personss(id: Int, parentId: Int, firstName: String, lastName: String, age: Float, idEq: Int, parentIdEq: Int, firstNameEq: String, lastNameEq: String, ageEq: Float, idGt: Int, parentIdGt: Int, firstNameGt: String, lastNameGt: String, ageGt: Float, idGte: Int, parentIdGte: Int, firstNameGte: String, lastNameGte: String, ageGte: Float, idLt: Int, parentIdLt: Int, firstNameLt: String, lastNameLt: String, ageLt: Float, idLte: Int, parentIdLte: Int, firstNameLte: String, lastNameLte: String, ageLte: Float, idLike: Int, parentIdLike: Int, firstNameLike: String, lastNameLike: String, ageLike: Float, idIsNull: Boolean, parentIdIsNull: Boolean, firstNameIsNull: Boolean, lastNameIsNull: Boolean, ageIsNull: Boolean, idIn: [Int], parentIdIn: [Int], firstNameIn: [String], lastNameIn: [String], ageIn: [Float], idNotIn: [Int], parentIdNotIn: [Int], firstNameNotIn: [String], lastNameNotIn: [String], ageNotIn: [Float], idLikeNoCase: Int, parentIdLikeNoCase: Int, firstNameLikeNoCase: String, lastNameLikeNoCase: String, ageLikeNoCase: Float, orderBy: PersonsPropertiesEnum, orderByDesc: PersonsPropertiesEnum, range: [Int], limit: [Int], offset: [Int]): [Persons]
+  animals(id: Int, ownerId: Int, name: String, species: String, idEq: Int, ownerIdEq: Int, nameEq: String, speciesEq: String, idGt: Int, ownerIdGt: Int, nameGt: String, speciesGt: String, idGte: Int, ownerIdGte: Int, nameGte: String, speciesGte: String, idLt: Int, ownerIdLt: Int, nameLt: String, speciesLt: String, idLte: Int, ownerIdLte: Int, nameLte: String, speciesLte: String, idLike: Int, ownerIdLike: Int, nameLike: String, speciesLike: String, idIsNull: Boolean, ownerIdIsNull: Boolean, nameIsNull: Boolean, speciesIsNull: Boolean, idIn: [Int], ownerIdIn: [Int], nameIn: [String], speciesIn: [String], idNotIn: [Int], ownerIdNotIn: [Int], nameNotIn: [String], speciesNotIn: [String], idLikeNoCase: Int, ownerIdLikeNoCase: Int, nameLikeNoCase: String, speciesLikeNoCase: String, orderBy: AnimalsPropertiesEnum, orderByDesc: AnimalsPropertiesEnum, range: [Int], limit: [Int], offset: [Int]): Animals
+  animalss(id: Int, ownerId: Int, name: String, species: String, idEq: Int, ownerIdEq: Int, nameEq: String, speciesEq: String, idGt: Int, ownerIdGt: Int, nameGt: String, speciesGt: String, idGte: Int, ownerIdGte: Int, nameGte: String, speciesGte: String, idLt: Int, ownerIdLt: Int, nameLt: String, speciesLt: String, idLte: Int, ownerIdLte: Int, nameLte: String, speciesLte: String, idLike: Int, ownerIdLike: Int, nameLike: String, speciesLike: String, idIsNull: Boolean, ownerIdIsNull: Boolean, nameIsNull: Boolean, speciesIsNull: Boolean, idIn: [Int], ownerIdIn: [Int], nameIn: [String], speciesIn: [String], idNotIn: [Int], ownerIdNotIn: [Int], nameNotIn: [String], speciesNotIn: [String], idLikeNoCase: Int, ownerIdLikeNoCase: Int, nameLikeNoCase: String, speciesLikeNoCase: String, orderBy: AnimalsPropertiesEnum, orderByDesc: AnimalsPropertiesEnum, range: [Int], limit: [Int], offset: [Int]): [Animals]
+}
+
+{
+  "errors": [
+    {
+      "message": "Cannot query field \"onOperation\" on type \"__Directive\".",
+      "locations": [
+        {
+          "line": 16,
+          "column": 9
+        }
+      ]
+    },
+    {
+      "message": "Cannot query field \"onFragment\" on type \"__Directive\".",
+      "locations": [
+        {
+          "line": 17,
+          "column": 9
+        }
+      ]
+    },
+    {
+      "message": "Cannot query field \"onField\" on type \"__Directive\".",
+      "locations": [
+        {
+          "line": 18,
+          "column": 9
+        }
+      ]
+    }
+  ]
+}

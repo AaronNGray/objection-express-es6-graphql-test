@@ -1,7 +1,7 @@
 {
-  "name": "objection-example-express-es6",
-  "version": "0.9.0",
-  "description": "Objection.js express ES6 example",
+  "name": "objection-graphql-test,
+  "version": "1.0.0",
+  "description": "Objection.js GraphQL Test",
   "main": "app.js",
   "scripts": {
     "migrate": "knex migrate:latest",
@@ -10,12 +10,13 @@
   "engines": {
     "node": ">=8.0.0"
   },
-  "author": "Sami Koskimäki",
+  "author": "AaronNGray",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "express-graphql": "^0.7.1",
     "express-promise-router": "^3.0.1",
     "graphql": "^14.0.2",
     "knex": "^0.14.6",
